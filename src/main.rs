@@ -19,10 +19,11 @@ fn main() {
 }
 
 fn find_fib(index: i32) -> i64 {
-    println!("{}", index);
     if index == 0 {
         return 0;
+    } else if index == 1 {
+        return 1;
     } else {
-        return find_fib(index - 1);
+        return find_fib(index - 1) + find_fib(index - 2);
     }
 }
